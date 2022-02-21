@@ -101,12 +101,4 @@ workflows:
   version: 2
   test-workflow:
     jobs:
-      - lint
-      - gomod
-      - go-test:
-          requires:
-            - lint
-            - gomod
-      - integration-test:
-          requires:
-            - go-test
+      - integration-test
